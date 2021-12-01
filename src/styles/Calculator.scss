@@ -1,0 +1,94 @@
+.App-Calculator {
+  background-color: white;
+  width: 80%;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+  &.appear {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+  &-CustomObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-List {
+    background-color: rgba(242, 242, 242, 0.474);
+    overflow-y: scroll;
+    height: 250px;
+    min-width: 350px;
+    max-width: 500px;
+    &-Element:hover {
+      cursor: pointer;
+      background-color: rgb(174, 174, 174);
+    }
+  }
+  &-NewValue {
+    display: flex;
+    border-radius: 5px;
+    padding: 5px;
+    & div {
+      margin: 0px 2px;
+    }
+  }
+  &-ObjectList {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-SelectObject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &-Element {
+      flex-basis: 30%;
+      padding: 10px 0px;
+      transition: background-color 300ms ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(174, 174, 174);
+      }
+      & svg {
+        pointer-events: none;
+      }
+      & p {
+        margin: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  &-Resume {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  &-BoxStats {
+    width: 50%;
+  }
+  &-BoxName {
+    font-size: 35px;
+    &-Percent {
+      font-size: 100px;
+      font-weight: 600;
+      margin: 5px;
+    }
+  }
+}
+
+.error {
+  border-bottom: red 4px solid !important;
+  transition: border 200ms ease-in-out;
+}
+.gone {
+  display: none;
+}

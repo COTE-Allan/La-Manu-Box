@@ -1,0 +1,24 @@
+.App-Menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+  &.disappear {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  &.gone {
+    display: none;
+  }
+  &-Slogan {
+    width: 60%;
+    font-size: 25px;
+  }
+}
+
+.ManuLogo {
+  fill: white;
+}
